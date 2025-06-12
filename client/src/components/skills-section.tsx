@@ -60,7 +60,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 bg-gray-50">
+    <section id="skills" className="py-20 px-6 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-5xl mx-auto">
         <motion.div 
           className="text-center mb-16"
@@ -70,9 +70,9 @@ export default function SkillsSection() {
           viewport={{ once: true }}
         >
           <div className="mb-6">
-            <span className="text-lg text-gray-600 italic">when I'm not out with my loved ones...</span>
+            <span className="text-lg text-gray-600 dark:text-gray-300 italic">when I'm not out with my loved ones...</span>
           </div>
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
             You'll catch me doing<br />
             a combo of these:
           </h2>
@@ -82,7 +82,7 @@ export default function SkillsSection() {
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              className="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-all duration-300"
+              className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-all duration-300 border border-gray-100 dark:border-gray-700"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
@@ -106,7 +106,7 @@ export default function SkillsSection() {
                     ) : (
                       <div className="w-5 h-5" />
                     )}
-                    <span className={`text-gray-800 font-medium ${skill.isItalic ? 'italic text-gray-400' : ''}`}>
+                    <span className={`text-gray-800 dark:text-gray-200 font-medium ${skill.isItalic ? 'italic text-gray-400 dark:text-gray-500' : ''}`}>
                       {skill.name}
                     </span>
                   </motion.div>
