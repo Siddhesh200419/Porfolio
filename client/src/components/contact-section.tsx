@@ -77,17 +77,17 @@ export default function ContactSection() {
     <section id="contact" className="py-20 px-6 bg-white dark:bg-gray-900">
       <div className="max-w-4xl mx-auto">
         <motion.div 
-          className="bg-white rounded-3xl shadow-2xl p-12 text-center"
+          className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-12 text-center border border-gray-100 dark:border-gray-700"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Ready to build something amazing<br />
             together?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
             Let's make it happen ✨
           </p>
 
@@ -137,31 +137,31 @@ export default function ContactSection() {
               type="submit" 
               size="lg"
               disabled={contactMutation.isPending}
-              className="w-full bg-gray-900 text-white hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 py-4"
+              className="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 py-4"
             >
               {contactMutation.isPending ? "Sending..." : "Send Message"}
             </Button>
           </form>
 
           {/* Contact Info */}
-          <div className="border-t border-gray-200 pt-8">
+          <div className="border-t border-gray-200 dark:border-gray-600 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
-                <h3 className="font-semibold text-gray-900 mb-2">Connect</h3>
-                <p className="text-gray-600">hello@siddheshgite.dev</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Connect</h3>
+                <p className="text-gray-600 dark:text-gray-300">hello@siddheshgite.dev</p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-2">Follow</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Follow</h3>
                 <div className="flex space-x-4">
                   {socialLinks.map((link) => (
                     <Button
                       key={link.name}
                       variant="ghost"
                       size="icon"
-                      className="w-10 h-10 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors duration-200"
+                      className="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
                       onClick={() => window.open(link.url, "_blank")}
                     >
-                      <link.icon className="h-4 w-4 text-gray-700" />
+                      <link.icon className="h-4 w-4 text-gray-700 dark:text-gray-300" />
                     </Button>
                   ))}
                 </div>

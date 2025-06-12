@@ -57,6 +57,18 @@
   --destructive: hsl(0, 62.8%, 30.6%);
   --destructive-foreground: hsl(210, 20%, 98%);
   --ring: hsl(217, 91%, 60%);
+  
+  /* Custom portfolio colors for dark mode */
+  --portfolio-gray-50: hsl(215, 27.9%, 16.9%);
+  --portfolio-gray-600: hsl(217.9, 10.6%, 64.9%);
+  --portfolio-gray-900: hsl(210, 20%, 98%);
+  --portfolio-blue-500: hsl(217, 91%, 60%);
+  --portfolio-blue-600: hsl(221, 83%, 53%);
+  --portfolio-green-500: hsl(142, 76%, 36%);
+  --portfolio-purple-500: hsl(262, 83%, 58%);
+  --portfolio-yellow-200: hsl(54, 77%, 25%);
+  --portfolio-green-200: hsl(142, 52%, 25%);
+  --portfolio-purple-200: hsl(262, 52%, 25%);
 }
 
 @layer base {
