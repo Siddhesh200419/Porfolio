@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 px-6 bg-gray-50">
+    <section id="about" className="py-20 px-6 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
@@ -40,8 +40,8 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">About Me</h2>
-            <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
+            <div className="space-y-4 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
               <p>
                 Born with a curiosity for technology and design. I've spent the past few years mastering 
                 React and Node.js while building SaaS applications that solve real-world problems.
@@ -50,18 +50,18 @@ export default function AboutSection() {
                 I join forces with startups and entrepreneurs to create compelling digital experiences. 
                 Ones that make products shine, resonate with users, and attract more customers.
               </p>
-              <p className="font-medium text-gray-800">
+              <p className="font-medium text-gray-800 dark:text-gray-200">
                 Currently focused on building innovative SaaS solutions and exploring the latest in 
                 web development technologies.
               </p>
             </div>
 
             <div className="mt-8">
-              <p className="text-sm text-gray-500 mb-4">So far I've collaborated with amazing teams and built products for:</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">So far I've collaborated with amazing teams and built products for:</p>
               <div className="flex flex-wrap items-center gap-6 opacity-60">
-                <div className="text-2xl font-bold text-gray-400">Startup A</div>
-                <div className="text-2xl font-bold text-gray-400">Company B</div>
-                <div className="text-2xl font-bold text-gray-400">Project C</div>
+                <div className="text-2xl font-bold text-gray-400 dark:text-gray-500">Startup A</div>
+                <div className="text-2xl font-bold text-gray-400 dark:text-gray-500">Company B</div>
+                <div className="text-2xl font-bold text-gray-400 dark:text-gray-500">Project C</div>
               </div>
             </div>
           </motion.div>

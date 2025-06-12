@@ -16,7 +16,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden bg-white dark:bg-gray-900">
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Floating decorative elements */}
         <motion.div 
@@ -58,7 +58,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <span className="text-lg text-gray-600 mb-4 block">👋 Hey, I'm Siddhesh Gite, passionate about creating...</span>
+          <span className="text-lg text-gray-600 dark:text-gray-300 mb-4 block">👋 Hey, I'm Siddhesh Gite, passionate about creating...</span>
         </motion.div>
 
         <motion.h1 
@@ -67,13 +67,13 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <span className="text-gray-900">building amazing</span><br />
-          <span className="text-gray-900">web experiences that</span><br />
+          <span className="text-gray-900 dark:text-white">building amazing</span><br />
+          <span className="text-gray-900 dark:text-white">web experiences that</span><br />
           <span className="gradient-text">users love</span>
         </motion.h1>
 
         <motion.p 
-          className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
+          className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
@@ -90,7 +90,7 @@ export default function HeroSection() {
           <Button 
             onClick={scrollToProjects}
             size="lg"
-            className="bg-gray-900 text-white hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 px-8 py-4 text-base"
+            className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 px-8 py-4 text-base"
           >
             <span className="font-medium">View Projects</span>
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -99,7 +99,7 @@ export default function HeroSection() {
             onClick={handleDownloadResume}
             variant="outline"
             size="lg"
-            className="border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 px-8 py-4 text-base"
+            className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 px-8 py-4 text-base"
           >
             <Download className="mr-2 h-4 w-4" />
             <span className="font-medium">Download Resume</span>

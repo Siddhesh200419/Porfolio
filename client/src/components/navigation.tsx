@@ -92,35 +92,35 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-white md:hidden pt-20">
+        <div className="fixed inset-0 z-40 bg-white dark:bg-gray-900 md:hidden pt-20">
           <div className="flex flex-col space-y-4 p-6">
             <button 
               onClick={() => scrollToSection("about")}
-              className="text-lg text-gray-600 hover:text-blue-600 transition-colors duration-200 text-left"
+              className="text-lg text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 text-left"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection("projects")}
-              className="text-lg text-gray-600 hover:text-blue-600 transition-colors duration-200 text-left"
+              className="text-lg text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 text-left"
             >
               Projects
             </button>
             <button 
               onClick={() => scrollToSection("skills")}
-              className="text-lg text-gray-600 hover:text-blue-600 transition-colors duration-200 text-left"
+              className="text-lg text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 text-left"
             >
               Skills
             </button>
             <button 
               onClick={() => scrollToSection("contact")}
-              className="text-lg text-gray-600 hover:text-blue-600 transition-colors duration-200 text-left"
+              className="text-lg text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 text-left"
             >
               Contact
             </button>
             <Button 
               onClick={scrollToContact}
-              className="bg-gray-900 text-white hover:bg-gray-800 w-fit"
+              className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 w-fit"
             >
               Say "Hello!"
             </Button>
