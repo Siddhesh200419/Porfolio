@@ -58,19 +58,15 @@ export default function ContactSection() {
     },
     {
       name: "LinkedIn",
-      url: "#",
+      url: "https://www.linkedin.com/in/siddhesh-gite-024aa5257/",
       icon: Linkedin
     },
     {
       name: "Twitter",
-      url: "#",
+      url: "https://x.com/Siddhesh2019",
       icon: Twitter
     },
-    {
-      name: "Website",
-      url: "#",
-      icon: Globe
-    }
+    
   ];
 
   return (
@@ -148,7 +144,7 @@ export default function ContactSection() {
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Connect</h3>
-                <p className="text-gray-600 dark:text-gray-300">hello@siddheshgite.dev</p>
+                <p className="text-gray-600 dark:text-gray-300">siddheshgite2004@gmail.com</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Follow</h3>

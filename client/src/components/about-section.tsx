@@ -43,12 +43,9 @@ export default function AboutSection() {
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
             <div className="space-y-4 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
               <p>
-                Born with a curiosity for technology and design. I've spent the past few years mastering 
-                React and Node.js while building SaaS applications that solve real-world problems.
-              </p>
+                Fueled by a deep curiosity for technology and design, I specialize in crafting responsive, full-stack web applications using React, Node.js, and the modern web stack. My journey started with an eagerness to learn, and has grown into a passion for building intuitive SaaS products that solve real-world problems.              </p>
               <p>
-                I join forces with startups and entrepreneurs to create compelling digital experiences. 
-                Ones that make products shine, resonate with users, and attract more customers.
+                I enjoy turning ideas into real, usable products — building apps that are fast, functional, and focused on the user experience.
               </p>
               <p className="font-medium text-gray-800 dark:text-gray-200">
                 Currently focused on building innovative SaaS solutions and exploring the latest in 
@@ -56,14 +53,7 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="mt-8">
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">So far I've collaborated with amazing teams and built products for:</p>
-              <div className="flex flex-wrap items-center gap-6 opacity-60">
-                <div className="text-2xl font-bold text-gray-400 dark:text-gray-500">Startup A</div>
-                <div className="text-2xl font-bold text-gray-400 dark:text-gray-500">Company B</div>
-                <div className="text-2xl font-bold text-gray-400 dark:text-gray-500">Project C</div>
-              </div>
-            </div>
+            
           </motion.div>
         </div>
       </div>

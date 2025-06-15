@@ -21,12 +21,12 @@ export default function Footer() {
             >
               GitHub
             </button>
-            <button 
+            {/* <button 
               onClick={() => window.open("#", "_blank")}
               className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors duration-200"
             >
               Blog
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
