@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import YCImage from "../../assets/startup.png";
+import ZomatoImg from "../../assets/image.png";
+import SwiggyImg from "../../assets/image2.png"
 
 export default function ProjectsSection() {
   const projects = [
@@ -12,8 +14,7 @@ export default function ProjectsSection() {
       description:
         "A responsive food ordering website built with React and Redux, using Swiggy's public API to display real-time restaurant and menu data.",
       techStack: ["React", "Redux", "Firebase"],
-      gradient: "from-blue-500 to-purple-600",
-      icon: "📄",
+      image: SwiggyImg,
       githubUrl: "https://github.com/Siddhesh200419/Swiggy.git",
       liveUrl: "https://swiggy-nu-rust.vercel.app/",
     },
@@ -23,8 +24,7 @@ export default function ProjectsSection() {
       description:
         "A full-stack Zomato Clone built with the MERN stack, featuring food ordering, real-time delivery tracking, and an admin dashboard.",
       techStack: ["MERN Stack", "CSS", "Stripe"],
-      gradient: "from-green-500 to-teal-600",
-      icon: "📊",
+      image: ZomatoImg,
       githubUrl: "https://github.com/Siddhesh200419/Zomato_Clone_Mern.git",
       liveUrl: "https://zomato-clone-mern-frontend.onrender.com/",
     },
@@ -51,7 +51,6 @@ export default function ProjectsSection() {
         "Express",
         "Multer",
         "JWT Auth",
-        
       ],
       gradient: "from-blue-500 to-purple-600",
       icon: "📄",
@@ -76,7 +75,7 @@ export default function ProjectsSection() {
       gradient: "from-pink-500 to-red-500",
       icon: "🏠",
       githubUrl: "https://github.com/Siddhesh200419/Major-Project.git",
-      liveUrl: "#", 
+      liveUrl: "#",
     },
   ];
 

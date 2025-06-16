@@ -1,4 +1,7 @@
+import dotenv from "dotenv";
+dotenv.config({ path: ".env.local" });
 import { users, contactMessages, type User, type InsertUser, type ContactMessage, type InsertContactMessage } from "@shared/schema";
+import { MongoClient, Db, Collection } from "mongodb";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
@@ -56,4 +59,64 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+// ----------------- MONGODB IMPLEMENTATION -----------------
+interface ContactMessageDoc extends Omit<ContactMessage, "id"> { _id?: any; }
+
+class MongoStorage implements IStorage {
+  private db: Db;
+  private messages: Collection<ContactMessageDoc>;
+  private usersCol: Collection<any>; // placeholder, not implemented
+
+  private constructor(db: Db) {
+    this.db = db;
+    this.messages = db.collection<ContactMessageDoc>("contact_messages");
+    this.usersCol = db.collection("users");
+  }
+
+  // Factory because constructors cannot be async
+  static async create(uri: string, dbName = "portfolio"): Promise<MongoStorage> {
+    const client = new MongoClient(uri);
+    await client.connect();
+    const db = client.db(dbName);
+    return new MongoStorage(db);
+  }
+
+  // ----------------- Contact Message -----------------
+  async createContactMessage(insertMessage: InsertContactMessage): Promise<ContactMessage> {
+    const doc: ContactMessageDoc = { ...insertMessage, createdAt: new Date() } as any;
+    const result = await this.messages.insertOne(doc);
+    return { id: result.insertedId.toString(), ...insertMessage, createdAt: doc.createdAt } as unknown as ContactMessage;
+  }
+
+  async getContactMessages(): Promise<ContactMessage[]> {
+    const cursor = this.messages.find().sort({ createdAt: -1 });
+    const docs = await cursor.toArray();
+    return docs.map((d) => ({ id: d._id.toString(), ...d } as unknown as ContactMessage));
+  }
+
+  // ----------------- Users (not used yet) -----------------
+  async getUser(id: number): Promise<User | undefined> {
+    // Implement later if needed
+    return undefined;
+  }
+
+  async getUserByUsername(_username: string): Promise<User | undefined> {
+    return undefined;
+  }
+
+  async createUser(_user: InsertUser): Promise<User> {
+    throw new Error("Not implemented");
+  }
+}
+
+// ----------------- STORAGE EXPORT -----------------
+let storage: IStorage;
+if (process.env.MONGODB_URI) {
+  storage = await MongoStorage.create(process.env.MONGODB_URI);
+  console.log("Connected to MongoDB for storage");
+} else {
+  storage = new MemStorage();
+  console.log("Using in-memory storage (MONGODB_URI not set)");
+}
+
+export { storage };
